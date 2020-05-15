@@ -25,37 +25,49 @@
         <div class="categoriesWrapper">
           <div class="categoryCard">
             <div>
-              <img src="https://sun9-68.userapi.com/c857216/v857216431/19b5de/SpOiqoZQ48w.jpg" />
+              <router-link to="/course1">
+                <img
+                  src="https://sun9-68.userapi.com/c857216/v857216431/19b5de/SpOiqoZQ48w.jpg"
+              /></router-link>
             </div>
             <div class="courseNameWrapper">
-              <p>pic №1</p>
+              <p>Программирование</p>
             </div>
           </div>
 
           <div class="categoryCard">
             <div>
-              <img src="https://tvorcheskie-proekty.ru/files/images/reklama.png" />
+              <router-link to="/course5">
+                <img
+                  src="https://tvorcheskie-proekty.ru/files/images/reklama.png"
+              /></router-link>
             </div>
             <div class="courseNameWrapper">
-              <p>pic №1</p>
+              <p>Маркетинг</p>
             </div>
           </div>
 
           <div class="categoryCard">
             <div>
-              <img src="https://sun7-7.userapi.com/6nxuRNgroJjM7mk-GJq-v_2RqH9bMGxUlS5E2A/wmWxmt9E0SI.jpg" />
+              <router-link to="/course3">
+                <img
+                  src="https://sun7-7.userapi.com/6nxuRNgroJjM7mk-GJq-v_2RqH9bMGxUlS5E2A/wmWxmt9E0SI.jpg"
+              /></router-link>
             </div>
             <div class="courseNameWrapper">
-              <p>pic №1</p>
+              <p>Финансы</p>
             </div>
           </div>
 
           <div class="categoryCard">
             <div>
-              <img src="https://guu.ru/wp-content/uploads/Fotolia_105930722_Subscription_Monthly_M.jpg" />
+              <router-link to="/course4"
+                ><img
+                  src="https://guu.ru/wp-content/uploads/Fotolia_105930722_Subscription_Monthly_M.jpg"
+              /></router-link>
             </div>
             <div class="courseNameWrapper">
-              <p>pic №1</p>
+              <p>Менеджмент</p>
             </div>
           </div>
         </div>
@@ -68,21 +80,31 @@
       <div class="Popular">
         <h2>Популярные курсы</h2>
         <div class="popularWrapper">
-          <div class="imgcontainer">
-            <img src="https://www.motocms.com/blog/wp-content/uploads/2018/01/web-desi-main.jpg" />
-          </div>
+          <router-link to="/course2"
+            ><div class="imgcontainer">
+              <img
+                src="https://www.motocms.com/blog/wp-content/uploads/2018/01/web-desi-main.jpg"
+              />
+            </div>
+          </router-link>
 
           <div class="popularText">
             <h2>Разработка инновационного продукта</h2>
-            <p>курс дает практические знания о поэтапном процессе разработки и вывода на рынок инновационного продукта.</p>
+            <p>
+              курс дает практические знания о поэтапном процессе разработки и
+              вывода на рынок инновационного продукта.
+            </p>
             <div>
-              <a class="buttonToCourses">Подробнее</a>
+              <router-link to="/course2"
+                ><a class="buttonToCourses">Подробнее</a></router-link
+              >
             </div>
           </div>
         </div>
+
         <div align="left" class="taglist">
           <a class="tag tagPurple">#Экономика</a>
-         <!-- <a class="tag tagYellow">#Программирование</a>
+          <!-- <a class="tag tagYellow">#Программирование</a>
           <a class="tag tagPink">#Дизайн</a>
           <a class="tag tagGreen">#реклама</a>
           <a class="tag tagOrange">#языки</a> -->
@@ -131,7 +153,7 @@
 
 <script>
 export default {
-  name: "mains"
+  name: "mains",
 };
 </script>
 
@@ -158,18 +180,18 @@ body {
   background-color: var(--main-menu-color);
   color: var(--overall-text-color);
 }
-img{
+img {
   max-width: 100%;
   max-height: 100%;
 }
-.categoryCard img{
+.categoryCard img {
   width: 100%;
   height: 275px;
   object-fit: fill;
 }
 
 h1 {
-  font-size: 49px;
+  font-size: 42px;
 }
 
 h2 {

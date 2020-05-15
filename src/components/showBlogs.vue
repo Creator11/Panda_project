@@ -7,7 +7,12 @@
         </div>
       </router-link>
       <div class="box1">
-        <input class="main-search" type="text" v-model="search" placeholder="Поиск курсов..." />
+        <input
+          class="main-search"
+          type="text"
+          v-model="search"
+          placeholder="Поиск курсов..."
+        />
         <button class="search-button">Найти</button>
       </div>
       <div class="box2">
@@ -18,26 +23,28 @@
         <p>Войти/регистрация</p>
       </div>
     </div>
-    <div v-for="blog in filteredBlogs" class="single-blog">
-      <div class="main-blog-description">
-        <div class="img-section">
-          <img class="blog-img" :src="blog.year" alt />
-        </div>
-        <div class="blog-description">
-          <div class="title-name">
-            <h3>{{ blog.title | to-uppercase }}</h3>
+    <router-link to="/course1">
+      <div v-for="blog in filteredBlogs" class="single-blog">
+        <div class="main-blog-description">
+          <div class="img-section">
+            <img class="blog-img" :src="blog.year" alt />
           </div>
-          <div class="description-text">
-            <article>{{ blog.body }}</article>
-          </div>
-          <div class="blog-info-text">
-            <p class="info-text__text">{{ blog.lang }}</p>
-            <p class="info-text__text">2019 год</p>
-            <P class="info-text__text">{{ blog.rate }}</P>
+          <div class="blog-description">
+            <div class="title-name">
+              <h3>{{ blog.title | (to - uppercase) }}</h3>
+            </div>
+            <div class="description-text">
+              <article>{{ blog.body }}</article>
+            </div>
+            <div class="blog-info-text">
+              <p class="info-text__text">{{ blog.lang }}</p>
+              <p class="info-text__text">2019 год</p>
+              <P class="info-text__text">{{ blog.rate }}</P>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -53,7 +60,7 @@ export default {
           rate: "4,8/5",
           title: "Управление личными финансами",
           body:
-            "Основной целью данного курса является формирование того, что необходимо  управление финансами"
+            "Основной целью данного курса является формирование того, что необходимо  управление финансами",
         },
         {
           year: "https://tvorcheskie-proekty.ru/files/images/reklama.png",
@@ -61,7 +68,7 @@ export default {
           rate: "4,6/5",
           title: "Контекстная реклама. Google AdWords",
           body:
-            "Курс “Контекстная реклама в Google AdWords” рассказывает об основах рекламы в Google AdWords"
+            "Курс “Контекстная реклама в Google AdWords” рассказывает об основах рекламы в Google AdWords",
         },
         {
           year:
@@ -70,7 +77,7 @@ export default {
           rate: "4,5/5",
           title: "Специализация Эффективный руководитель",
           body:
-            "Эта специализация предназначена для всех, кто интересуется психологией менеджмента "
+            "Эта специализация предназначена для всех, кто интересуется психологией менеджмента ",
         },
         {
           year:
@@ -79,7 +86,7 @@ export default {
           rate: "4,7/5",
           title: "Learn English: Intermediate Grammar",
           body:
-            "This specialization covers common topics in intermediate grammar, nglish grammar topics that learners of English frustrating"
+            "This specialization covers common topics in intermediate grammar, nglish grammar topics that learners of English frustrating",
         },
         {
           year:
@@ -88,7 +95,7 @@ export default {
           rate: "4,9/5",
           title: "Искусство разработки на современном C++",
           body:
-            "В специализации преподаватели делятся своим многолетним опытом создания больших проектов на языке C++."
+            "В специализации преподаватели делятся своим многолетним опытом создания больших проектов на языке C++.",
         },
         {
           year:
@@ -97,20 +104,20 @@ export default {
           rate: "4,6/5",
           title: " Разработка инновационного продукта",
           body:
-            "курс дает практические знания о поэтапном процессе разработки и вывода на рынок инновационного продукта."
-        }
+            "курс дает практические знания о поэтапном процессе разработки и вывода на рынок инновационного продукта.",
+        },
       ],
-      search: ""
+      search: "",
     };
   },
 
   computed: {
     filteredBlogs: function() {
-      return this.blogs.filter(blog => {
+      return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
